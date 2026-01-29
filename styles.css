@@ -463,57 +463,6 @@ p {
     color: var(--color-primary-light);
 }
 
-/* Careers */
-.careers {
-    padding: 60px 0;
-    background: var(--color-bg-elevated);
-    border-top: 1px solid var(--color-border);
-    border-bottom: 1px solid var(--color-border);
-}
-
-.careers-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 24px;
-    flex-wrap: wrap;
-}
-
-.careers-text {
-    flex: 1;
-    min-width: 280px;
-}
-
-.careers-content h2 {
-    font-size: 1.5rem;
-    margin-bottom: 8px;
-}
-
-.careers-content p {
-    font-size: 0.95rem;
-    margin: 0;
-}
-
-.careers-content a {
-    color: var(--color-primary-light);
-    text-decoration: none;
-    transition: color 0.2s ease;
-}
-
-.careers-content a:hover {
-    color: var(--color-accent);
-}
-
-.careers-badge {
-    padding: 8px 16px;
-    background: var(--color-bg-card);
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius-sm);
-    color: var(--color-text-muted);
-    font-size: 0.875rem;
-    white-space: nowrap;
-}
-
 /* Contact */
 .contact {
     padding: 120px 0;
@@ -617,8 +566,29 @@ p {
     justify-content: space-between;
 }
 
+.footer-links {
+    text-align: right;
+}
+
+.footer-careers {
+    display: block;
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    margin-bottom: 8px;
+}
+
+.footer-careers a {
+    color: var(--color-primary-light);
+    text-decoration: none;
+}
+
+.footer-careers a:hover {
+    color: var(--color-accent);
+}
+
 .footer-content p {
     font-size: 0.875rem;
+    margin: 0;
 }
 
 /* Success Banner */
