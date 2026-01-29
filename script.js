@@ -87,12 +87,30 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
-// Form submission feedback
+// Form submission with AJAX
 const form = document.querySelector('.contact-form');
 if (form) {
-    form.addEventListener('submit', function(e) {
+    form.addEventListener('submit', async function(e) {
+        e.preventDefault();
         const button = form.querySelector('button[type="submit"]');
         button.textContent = 'Sending...';
         button.disabled = true;
+        
+        try {
+            const response = await fetch(form.action, {
+                method: 'POST',
+                body: new FormData(form),
+                headers: { 'Accept': 'application/json' }
+            });
+            
+            if (response.ok) {
+                window.location.href = '/?submitted=true';
+            } else {
+                throw new Error('Form submission failed');
+            }
+        } catch (error) {
+            button.textContent = 'Error - Try Again';
+            button.disabled = false;
+        }
     });
 }
