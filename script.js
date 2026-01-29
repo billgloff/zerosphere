@@ -1,3 +1,24 @@
+// Check for form submission success
+if (window.location.search.includes('submitted=true')) {
+    // Remove query param from URL without reload
+    window.history.replaceState({}, '', window.location.pathname);
+    
+    // Show success message
+    const successBanner = document.createElement('div');
+    successBanner.className = 'success-banner';
+    successBanner.innerHTML = `
+        <div class="success-content">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+            <span>Thanks for reaching out! We'll get back to you within 24 hours.</span>
+            <button onclick="this.parentElement.parentElement.remove()" aria-label="Close">&times;</button>
+        </div>
+    `;
+    document.body.prepend(successBanner);
+    
+    // Scroll to top
+    window.scrollTo(0, 0);
+}
+
 // Mobile menu toggle
 const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
 const navLinks = document.querySelector('.nav-links');
