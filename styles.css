@@ -566,29 +566,8 @@ p {
     justify-content: space-between;
 }
 
-.footer-links {
-    text-align: right;
-}
-
-.footer-careers {
-    display: block;
-    font-size: 0.875rem;
-    color: var(--color-text-muted);
-    margin-bottom: 8px;
-}
-
-.footer-careers a {
-    color: var(--color-primary-light);
-    text-decoration: none;
-}
-
-.footer-careers a:hover {
-    color: var(--color-accent);
-}
-
 .footer-content p {
     font-size: 0.875rem;
-    margin: 0;
 }
 
 /* Success Banner */
