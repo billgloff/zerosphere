@@ -84,31 +84,6 @@ style.textContent = `
         opacity: 1 !important;
         transform: translateY(0) !important;
     }
-    
-    .nav-links.active {
-        display: flex;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        flex-direction: column;
-        background: rgba(10, 10, 11, 0.98);
-        padding: 24px;
-        gap: 24px;
-        border-bottom: 1px solid var(--color-border);
-    }
-    
-    .mobile-menu-btn.active span:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px);
-    }
-    
-    .mobile-menu-btn.active span:nth-child(2) {
-        opacity: 0;
-    }
-    
-    .mobile-menu-btn.active span:nth-child(3) {
-        transform: rotate(-45deg) translate(5px, -5px);
-    }
 `;
 document.head.appendChild(style);
 
