@@ -463,6 +463,36 @@ p {
     color: var(--color-primary-light);
 }
 
+/* Careers */
+.careers {
+    padding: 80px 0;
+}
+
+.careers-content {
+    max-width: 600px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.careers-content h2 {
+    margin-bottom: 20px;
+}
+
+.careers-content p {
+    font-size: 1.0625rem;
+    margin-bottom: 12px;
+}
+
+.careers-content a {
+    color: var(--color-primary-light);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.careers-content a:hover {
+    color: var(--color-accent);
+}
+
 /* Contact */
 .contact {
     padding: 120px 0;
